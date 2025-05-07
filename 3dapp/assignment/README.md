@@ -19,7 +19,11 @@ This project is an interactive 3D web application that allows users to explore a
 
 ## Live Demo
 
-Check out the live demo: [Smart Living 3D Demo](https://users.sussex.ac.uk/~yourid/web3d/)
+Check out the live demo: [Smart Living 3D Demo](https://users.sussex.ac.uk/~ab2290/3dapp/assignment/index.html)
+
+# GitHub Repository
+
+This project is available on GitHub at: https://github.com/7aya/smartliving3d
 
 ## Technologies Used
 
