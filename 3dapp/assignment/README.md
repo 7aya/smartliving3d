@@ -25,6 +25,24 @@ Check out the live demo: [Smart Living 3D Demo](https://users.sussex.ac.uk/~ab22
 
 This project is available on GitHub at: https://github.com/7aya/smartliving3d
 
+## ## Important Usage Notes
+
+### Viewing the Models
+- **Select a Model**: Although the TV appears selected by default in the interface, please click on each model in the selector panel to fully load and view them.
+- **Loading Time**: Please allow 1-2 minutes for each model to completely load after selection. The 3D models are detailed and may require some time to initialize properly, especially on first load.
+- **Controls**: Once loaded, you can use the various controls in the interface to:
+   - Toggle wireframe mode
+   - Change camera views
+   - Adjust lighting
+   - Interact with model-specific features (TV power, fridge door, lamp brightness)
+
+### Best Experience
+- For optimal performance, the application is recommended to be viewed on Chrome or Firefox browsers
+- If models don't appear to load, try refreshing the page and allowing more time
+- All interactive elements become available once the models are fully loaded
+
+Thank you for your patience while exploring this Web 3D application!
+
 ## Technologies Used
 
 ### Frontend
