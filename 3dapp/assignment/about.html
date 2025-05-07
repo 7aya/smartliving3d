@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Living 3D | About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Additional styles for the About page */
+        .about-hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: white;
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/circuit-pattern.svg');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .about-hero .lead {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .content-card h2 {
+            color: #1a2a6c;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .content-card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a2a6c, #b21f1f);
+        }
+        
+        .content-card h3 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .process-image {
+            margin: 25px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .process-image img {
+            transition: transform 0.5s;
+        }
+        
+        .process-image:hover img {
+            transform: scale(1.02);
+        }
+        
+        .caption {
+            background: rgba(0,0,0,0.05);
+            padding: 10px;
+            text-align: center;
+            font-style: italic;
+            margin: 0;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .tech-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .tech-item:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .tech-item i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #1a2a6c;
+        }
+        
+        .tech-item h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .tech-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-section.bg-light {
+            background-color: #f8f9fa;
+        }
+        
+        .feature-list {
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            flex-grow: 1;
+        }
+        
+        .feature-text h4 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .feature-text p {
+            margin: 0;
+            color: #666;
+        }
+        
+        .deeper-understanding {
+            background: linear-gradient(135deg, #1a2a6c88, #b21f1f88);
+            color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        .deeper-understanding h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .deeper-understanding-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .deeper-understanding-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .deeper-understanding-item h4 {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .deeper-understanding-item h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        .originality-section {
+            border: 2px solid #1a2a6c;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        .originality-badge {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: #1a2a6c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        /* Animation classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        
+        .fade-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered animation delays */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header class="navbar navbar-expand-md fixed-top scrolled">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo">Smart<span>Living</span>3D</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 data-aos="fade-down">About This Project</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">An immersive Web 3D application showcasing interactive smart home devices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Project Overview</h2>
+                        <p>
+                            Smart Living 3D is an interactive web application designed to showcase the integration of 3D models 
+                            with web technologies. This project demonstrates how Three.js can be used to create engaging user 
+                            experiences that allow users to interact with virtual representations of smart home devices.
+                        </p>
+                        <p>
+                            The application features three detailed 3D models: a smart TV, a smart refrigerator, and a smart lamp. 
+                            Each model can be manipulated and controlled through an intuitive user interface, demonstrating 
+                            real-world functionalities such as turning devices on/off, adjusting settings, and changing visual properties.
+                        </p>
+                        
+                        <div class="process-image" data-aos="zoom-in" data-aos-delay="200">
+                        </div>
+                        
+                        <div class="feature-list">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-tv"></i>
+                                        </div>
+                                        <div class="feature-text">
+                                            <h4>Smart TV</h4>
+                                            <p>Interactive TV with power controls, channel switching, and volume adjustment</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-item" data-aos="fade-right" data-aos-delay="200">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-temperature-low"></i>
+                                        </div>
+                                        <div class="feature-text">
+                                            <h4>Smart Refrigerator</h4>
+                                            <p>Temperature controls, door animation, and customisable appearance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-item" data-aos="fade-right" data-aos-delay="300">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <div class="feature-text">
+                                            <h4>Smart Lamp</h4>
+                                            <p>Light controls, brightness adjustment, and color temperature settings</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-item" data-aos="fade-right" data-aos-delay="400">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-vr-cardboard"></i>
+                                        </div>
+                                        <div class="feature-text">
+                                            <h4>3D Visualisation</h4>
+                                            <p>Interactive camera controls, wireframe mode, and lighting adjustments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="about-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Development Process</h2>
+                        
+                        <h3>3D Modeling</h3>
+                        <p>
+                            All 3D models were created using Blender. The modeling process focused on achieving a balance between 
+                            visual quality and performance. Each model was optimised with efficient geometry, appropriate materials, 
+                            and careful UV mapping for textures.
+                        </p>
+                        <div class="process-image" data-aos="zoom-in" data-aos-delay="200">
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                                <h3>Model Optimisation</h3>
+                                <p>
+                                    Each model was carefully optimised to ensure efficient rendering in a web environment:
+                                </p>
+                                <ul>
+                                    <li>Reduced polygon count while maintaining visual fidelity</li>
+                                    <li>Optimised texture sizes and compression</li>
+                                    <li>Created custom LOD (Level of Detail) systems</li>
+                                    <li>Implemented efficient UV mapping</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                                <h3>Animation Rigging</h3>
+                                <p>
+                                    The models include interactive elements that required careful rigging:
+                                </p>
+                                <ul>
+                                    <li>Fridge door opening and closing animations</li>
+                                    <li>TV screen display state changes</li>
+                                    <li>Lamp lighting effects and brightness adjustments</li>
+                                    <li>Smooth transitions between different states</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3>Web Implementation</h3>
+                        <p>
+                            The web application was built using HTML5, CSS3, and JavaScript. Three.js was used as the primary 
+                            library for 3D rendering and interaction. The UI was designed with Bootstrap to ensure responsiveness 
+                            across different devices.
+                        </p>
+                        <p>
+                            Key technical features implemented include:
+                        </p>
+                        
+                        <div class="row" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>Custom model loading and positioning</li>
+                                    <li>Interactive controls for each model</li>
+                                    <li>Dynamic lighting with adjustable properties</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>Wireframe mode for examining model geometry</li>
+                                    <li>Camera position controls for different viewpoints</li>
+                                    <li>Real-time model statistics display</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>Custom shaders for realistic materials</li>
+                                    <li>Post-processing effects for enhanced visuals</li>
+                                    <li>Database integration for state persistence</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                                <h3>Challenge: Model Loading and Placement</h3>
+                                <p>
+                                    One significant challenge was ensuring proper model loading and placement within the scene. This was addressed 
+                                    by implementing a bounding box calculation system that automatically scales and positions each model based on 
+                                    its dimensions, ensuring consistent presentation regardless of the original model size.
+                                </p>
+                            </div>
+                            
+                            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                                <h3>Challenge: Interactive Controls</h3>
+                                <p>
+                                    Creating model-specific interactive controls required careful traversal of the model hierarchy to identify 
+                                    and manipulate specific mesh components. This was solved by using naming conventions within the models and 
+                                    implementing targeted material and transformation modifications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deeper Understanding -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Deeper Understanding Implementation</h2>
+                        <p>
+                            This project implements several advanced techniques and architectural patterns that go beyond the basic requirements
+                            to demonstrate a deeper understanding of Web 3D application development:
+                        </p>
+                        
+                        <div class="deeper-understanding">
+                            <div class="row">
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="deeper-understanding-item">
+                                        <h4>MVC Architecture</h4>
+                                        <p>Implemented the Model-View-Controller pattern to separate data, presentation, and business logic:</p>
+                                        <ul class="text-white">
+                                            <li><strong>Model:</strong> Manages device states and data persistence</li>
+                                            <li><strong>View:</strong> Handles UI rendering and user feedback</li>
+                                            <li><strong>Controller:</strong> Coordinates interactions between Model and View</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                    <div class="deeper-understanding-item">
+                                        <h4>Database Integration</h4>
+                                        <p>Created a SQLite database system with PHP backend for:</p>
+                                        <ul class="text-white">
+                                            <li>User preference storage and retrieval</li>
+                                            <li>Interaction analytics and tracking</li>
+                                            <li>Model state persistence across sessions</li>
+                                            <li>Statistical data collection for usage patterns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                                    <div class="deeper-understanding-item">
+                                        <h4>Custom GLSL Shaders</h4>
+                                        <p>Developed custom shader materials for enhanced visual quality:</p>
+                                        <ul class="text-white">
+                                            <li>Glass shader with fresnel effect for TV screen</li>
+                                            <li>Metal shader with realistic reflections</li>
+                                            <li>Emissive shader with pulsing glow effects</li>
+                                            <li>Toon shader for stylized rendering options</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="deeper-understanding-item">
+                                        <h4>Post-Processing Pipeline</h4>
+                                        <p>Implemented advanced post-processing effects:</p>
+                                        <ul class="text-white">
+                                            <li>Bloom effect for emissive materials</li>
+                                            <li>Ambient occlusion for realistic shadows</li>
+                                            <li>Film grain for stylized rendering</li>
+                                            <li>Color correction for enhanced visual quality</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="process-image mt-4" data-aos="zoom-in" data-aos-delay="200">
+                        </div>
+                        
+                        <p class="mt-4" data-aos="fade-up" data-aos-delay="100">
+                            These advanced implementations demonstrate a comprehensive understanding of modern web 3D development
+                            techniques and architectural patterns. The modular design allows for easy expansion and maintenance,
+                            while the custom shaders and post-processing effects provide enhanced visual quality beyond standard
+                            Three.js materials.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessibility Considerations -->
+    <section class="about-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Accessibility Considerations</h2>
+                        <p>
+                            The application was designed with accessibility in mind, implementing the following features:
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                                <h3>Visual Accessibility</h3>
+                                <ul>
+                                    <li>High contrast UI elements for better visibility</li>
+                                    <li>Colorblind-friendly color schemes</li>
+                                    <li>Text alternatives for visual controls</li>
+                                    <li>Zoomable interface that maintains functionality</li>
+                                    <li>Visual feedback for all interactive elements</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                                <h3>Input Accessibility</h3>
+                                <ul>
+                                    <li>Keyboard navigable controls</li>
+                                    <li>Touch-friendly interface for mobile devices</li>
+                                    <li>Responsive design for various screen sizes</li>
+                                    <li>Alternative navigation methods</li>
+                                    <li>Reduced motion option for animations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4" data-aos="fade-up" data-aos-delay="100">
+                            While 3D web applications present inherent accessibility challenges, efforts were made to ensure 
+                            the core functionality remains accessible to as many users as possible. Future iterations will
+                            continue to improve accessibility features based on user feedback and testing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Technologies Used</h2>
+                        <div class="tech-grid">
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+                                <i class="fab fa-html5"></i>
+                                <h4>HTML5</h4>
+                                <p>Used for the structural foundation of the web application</p>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
+                                <i class="fab fa-css3-alt"></i>
+                                <h4>CSS3</h4>
+                                <p>Styling and animations for an engaging user interface</p>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+                                <i class="fab fa-js"></i>
+                                <h4>JavaScript</h4>
+                                <p>Core programming language for functionality and interactivity</p>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+                                <i class="fas fa-cube"></i>
+                                <h4>Three.js</h4>
+                                <p>JavaScript library for creating and displaying 3D content</p>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+                                <i class="fab fa-bootstrap"></i>
+                                <h4>Bootstrap</h4>
+                                <p>Framework for responsive layout and UI components</p>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+                                <i class="fas fa-shapes"></i>
+                                <h4>Blender</h4>
+                                <p>3D modeling software for creating the model assets</p>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+                                <i class="fab fa-php"></i>
+                                <h4>PHP</h4>
+                                <p>Server-side scripting for database operations</p>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+                                <i class="fas fa-database"></i>
+                                <h4>SQLite</h4>
+                                <p>Lightweight database for storing application data</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Development Environment</h2>
+                        <p>
+                            This project is packaged with a complete Visual Studio Code development environment to ensure consistent code quality and streamlined development workflow.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                                <h3>VS Code Configuration</h3>
+                                <p>The project includes:</p>
+                                <ul>
+                                    <li>Custom workspace configuration</li>
+                                    <li>Recommended extensions for web development</li>
+                                    <li>Debugging configurations for client and server code</li>
+                                    <li>Task automation for common development workflows</li>
+                                    <li>Code formatting rules for consistent code style</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                                <h3>Development Workflow</h3>
+                                <p>The VS Code setup supports:</p>
+                                <ul>
+                                    <li>Integrated development server with live reload</li>
+                                    <li>Automatic code formatting on save</li>
+                                    <li>Integrated debugging for JavaScript and PHP</li>
+                                    <li>Easy deployment preparation with task automation</li>
+                                    <li>Consistent development experience across all platforms</li>
+                                </ul>
+                                <p class="mt-3">
+                                    <a href="vs-code-setup.md" class="btn btn-primary">
+                                        <i class="fas fa-code me-2"></i> View Setup Guide
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Improvements -->
+    <section class="about-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Future Improvements</h2>
+                        <p>
+                            While the current implementation meets the project requirements, several enhancements could be made in future iterations:
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                                <h3>Technical Enhancements</h3>
+                                <ul>
+                                    <li>Implementation of more advanced GLSL shaders</li>
+                                    <li>Physics-based interactions with the models</li>
+                                    <li>Integration of WebXR for VR/AR experiences</li>
+                                    <li>Real-time collaboration features</li>
+                                    <li>Performance optimisations for mobile devices</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                                <h3>Feature Expansions</h3>
+                                <ul>
+                                    <li>Expansion of the model library with more devices</li>
+                                    <li>Smart home automation simulation</li>
+                                    <li>IoT integration with real smart home devices</li>
+                                    <li>User account system with customised experiences</li>
+                                    <li>Room layout designer with multiple device placement</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="process-image mt-4" data-aos="zoom-in" data-aos-delay="300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statement of Originality -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <div class="originality-section">
+                            <div class="originality-badge">Official Statement</div>
+                            <h2>Statement of Originality</h2>
+                            <p>
+                                I hereby declare that this project, "Smart Living 3D," was created as an assignment for the Web 3D Applications 
+                                module. I confirm that this is my original work, and any external sources or libraries used have been properly 
+                                credited in the References section.
+                            </p>
+                            <p>
+                                While the implementation incorporates techniques and concepts learned from course materials, documentation, 
+                                and online resources, the design, models, code organisation, and creative elements represent my original work.
+                            </p>
+                            <p>
+                                The 3D models were created from scratch in Blender, inspired by contemporary smart home devices but not 
+                                representing any specific commercial products. All textures and materials were either created by me or sourced 
+                                from royalty-free libraries with proper attribution.
+                            </p>
+                            <p>
+                                Third-party libraries used (Three.js, Bootstrap, etc.) are acknowledged, and their usage complies with 
+                                their respective licenses. All code adaptations and implementations are properly attributed where applicable.
+                            </p>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation & Publication -->
+    <section class="about-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Implementation & Publication</h2>
+                        <p>
+                            This project has been developed using industry-standard tools and practices, and has been published
+                            in accordance with the assignment requirements.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                                <h3>Development Environment</h3>
+                                <p>The project was developed and packaged using Visual Studio Code, with the following extensions:</p>
+                                <ul>
+                                    <li>Live Server for local development</li>
+                                    <li>ESLint for code quality</li>
+                                    <li>Prettier for code formatting</li>
+                                    <li>GitLens for version control</li>
+                                    <li>Three.js snippets for easier development</li>
+                                </ul>
+                            </div>
+                            
+            
+                        <div class="row mt-4">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+                                <h3>Deployment</h3>
+                                <p>The application is deployed and accessible at:</p>
+                                <ul>
+                                    <li>
+                                        <strong>Web Server URL:</strong> 
+                                        <a href="http://unix.sussex.ac.uk/its/home/ab2290/public_html/3dapp/assignment" target="_blank">
+                                            http://unix.sussex.ac.uk/its/home/ab2290/public_html/3dapp/assignment
+                                        </a>
+                                    </li>
+                                    <li>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <strong>Documentation:</strong> Available in the README and about pages
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+                                <h3>Testing & Validation</h3>
+                                <p>The application has been tested on multiple platforms:</p>
+                                <ul>
+                                    <li>Desktop browsers (Chrome, Firefox, Safari, Edge)</li>
+                                    <li>Mobile devices (iOS and Android)</li>
+                                    <li>Various screen sizes and resolutions</li>
+                                    <li>Different internet connection speeds</li>
+                                </ul>
+                                <p>All HTML and CSS has been validated using W3C validators.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">Smart<span>Living</span>3D</div>
+                    <p>An interactive Web 3D application showcasing smart home devices.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Created for Web 3D Applications module</p>
+                    <p>&copy;2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialise AOS animations
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+            
+            // Activate scroll-triggered animations
+            const fadeElements = document.querySelectorAll('.fade-up');
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

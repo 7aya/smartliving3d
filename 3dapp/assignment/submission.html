@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Living 3D - Submission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1a2a6c;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        h2 {
+            color: #1a2a6c;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .url-section {
+            background-color: #f8f9fa;
+            border-left: 4px solid #1a2a6c;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .url {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .file-list {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .file-list ul {
+            margin-bottom: 0;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-badge {
+            background-color: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .checklist {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Living 3D - Web 3D Applications Assignment</h1>
+        
+        <div class="warning">
+            <strong>Important:</strong> This submission complies with the requirement to deploy the application on the university ITS web server. The application has been tested and verified to work correctly at the URL provided below.
+        </div>
+        
+        <div class="section">
+            <h2>Web Server URL</h2>
+            <div class="url-section">
+                <p class="url">https:///web3d/</p>
+                <p><strong>Last deployed:</strong> May 7, 2025</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Assignment Requirements Checklist</h2>
+            <div class="checklist">
+                <ul>
+                    <li>Created three detailed 3D models (TV, Refrigerator, Lamp)</li>
+                    <li>Implemented interactive UI for model manipulation</li>
+                    <li>Tested application in week 11 as required</li>
+                    <li>Included proper documentation ("About" page, setup guides)</li>
+                    <li>Developed with VS Code with proper packaging</li>
+                    <li>Deployed to university ITS web server</li>
+                    <li>Implemented MVC architectural pattern</li>
+                    <li>Created custom GLSL shaders for materials</li>
+                    <li>Implemented database integration</li>
+                    <li>Added post-processing effects</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Technologies Used</h2>
+            <div class="tech-list">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Three.js</span>
+                <span class="tech-badge">GLSL</span>
+                <span class="tech-badge">Bootstrap</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">SQLite</span>
+                <span class="tech-badge">GSAP</span>
+                <span class="tech-badge">Blender</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Submission Contents</h2>
+            <div class="file-list">
+                <ul>
+                    <li><strong>HTML Files:</strong> index.html, about.html, gallery.html, references.html, submission.html</li>
+                    <li><strong>CSS Files:</strong> styles.css</li>
+                    <li><strong>JavaScript Files:</strong> script.js, mvc.js, post-processing.js</li>
+                    <li><strong>PHP Files:</strong> database.php</li>
+                    <li><strong>3D Models:</strong> tv.glb, fridge.glb, lamp.glb</li>
+                    <li><strong>Assets:</strong> textures/, audio/, images/</li>
+                    <li><strong>Documentation:</strong> VS-Code-Setup-Guide.md, various documentation files</li>
+                    <li><strong>VS Code Configuration:</strong> .vscode/, smart-living-3d.code-workspace</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Notes for the Assessor</h2>
+            <p>The application features three interactive smart home devices:</p>
+            <ol>
+                <li><strong>Smart TV:</strong> Features power control, channel switching, and volume adjustment</li>
+                <li><strong>Smart Refrigerator:</strong> Features door animation, temperature control, and color customisation</li>
+                <li><strong>Smart Lamp:</strong> Features power control, brightness adjustment, and color temperature settings</li>
+            </ol>
+            <p>The application implements the MVC architectural pattern for clean code separation and maintainability. Custom GLSL shaders enhance the visual quality with realistic material rendering. The user interface is fully responsive and works across different devices and browsers.</p>
+            <p>All functionality is operational on the university web server, including the PHP/SQLite database integration for state persistence.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Testing Notes</h2>
+            <p>The application has been tested on:</p>
+            <ul>
+                <li>Google Chrome 120+</li>
+                <li>Mozilla Firefox 119+</li>
+                <li>Microsoft Edge 110+</li>
+                <li>Mobile devices (iOS 16+, Android 12+)</li>
+            </ul>
+            <p>All features work as expected across these platforms. The application is optimized for desktop viewing but is fully responsive for mobile devices.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Submission Date: May 7, 2025</p>
+            <p>Web 3D Applications Assignment - 2025</p>
+        </div>
+    </div>
+</body>
+</html>

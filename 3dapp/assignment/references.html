@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Living 3D | References</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Additional styles for the References page */
+        .references-hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: white;
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .references-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/circuit-pattern.svg');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .references-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .references-hero .lead {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .content-card h2 {
+            color: #1a2a6c;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .content-card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a2a6c, #b21f1f);
+        }
+        
+        .reference-section {
+            margin-bottom: 40px;
+        }
+        
+        .reference-item {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: all 0.3s;
+        }
+        
+        .reference-item:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transform: translateY(-3px);
+        }
+        
+        .reference-item h3 {
+            color: #1a2a6c;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .reference-item h3 i {
+            margin-right: 10px;
+            color: #b21f1f;
+        }
+        
+        .reference-item p.reference-info {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        .reference-item .license {
+            font-style: italic;
+            color: #888;
+            font-size: 0.85rem;
+        }
+        
+        .reference-item .description {
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .reference-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #1a2a6c;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .reference-link:hover {
+            color: #b21f1f;
+            text-decoration: underline;
+        }
+        
+        .reference-link i {
+            margin-right: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header class="navbar navbar-expand-md fixed-top scrolled">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo">Smart<span>Living</span>3D</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="references.html">References</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- References Hero Section -->
+    <section class="references-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 data-aos="fade-down">References</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">Acknowledgements and credits for libraries, resources, and inspirations used in this project</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Content -->
+    <section class="references-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Libraries & Frameworks</h2>
+                        <p>The following libraries and frameworks were utilised in the development of this project:</p>
+                        
+                        <div class="reference-section">
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="100">
+                                <h3><i class="fas fa-cube"></i> Three.js</h3>
+                                <p class="reference-info"><strong>Version:</strong> 0.128.0</p>
+                                <p class="reference-info"><strong>Authors:</strong> three.js authors (Ricardo Cabello and contributors)</p>
+                                <p class="license">License: MIT</p>
+                                <p class="description">
+                                    Three.js is a cross-browser JavaScript library and application programming interface (API) used to create and display animated 3D computer graphics in a web browser using WebGL.
+                                </p>
+                                <a href="https://threejs.org/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Official Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="150">
+                                <h3><i class="fab fa-bootstrap"></i> Bootstrap</h3>
+                                <p class="reference-info"><strong>Version:</strong> 5.2.3</p>
+                                <p class="reference-info"><strong>Authors:</strong> Twitter, Inc. and Bootstrap Contributors</p>
+                                <p class="license">License: MIT</p>
+                                <p class="description">
+                                    Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+                                </p>
+                                <a href="https://getbootstrap.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Official Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="200">
+                                <h3><i class="fas fa-magic"></i> GSAP (GreenSock Animation Platform)</h3>
+                                <p class="reference-info"><strong>Version:</strong> 3.11.4</p>
+                                <p class="reference-info"><strong>Authors:</strong> GreenSock</p>
+                                <p class="license">License: Standard GreenSock License</p>
+                                <p class="description">
+                                    GSAP is a robust JavaScript animation library that enables super-smooth, high-performance animations of HTML elements.
+                                </p>
+                                <a href="https://greensock.com/gsap/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Official Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="250">
+                                <h3><i class="fas fa-font"></i> Font Awesome</h3>
+                                <p class="reference-info"><strong>Version:</strong> 6.0.0</p>
+                                <p class="reference-info"><strong>Authors:</strong> Fonticons, Inc.</p>
+                                <p class="license">License: Font Awesome Free License</p>
+                                <p class="description">
+                                    Font Awesome is a font and icon toolkit based on CSS and Less, providing scalable vector icons that can be customised with CSS.
+                                </p>
+                                <a href="https://fontawesome.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Official Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="300">
+                                <h3><i class="fas fa-wind"></i> AOS (Animate On Scroll)</h3>
+                                <p class="reference-info"><strong>Version:</strong> 2.3.1</p>
+                                <p class="reference-info"><strong>Authors:</strong> Michał Sajnóg</p>
+                                <p class="license">License: MIT</p>
+                                <p class="description">
+                                    AOS is a library that allows for on-scroll animations, enhancing the user experience with subtle motion effects.
+                                </p>
+                                <a href="https://michalsnik.github.io/aos/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Official Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Tools & Software</h2>
+                        <p>The following tools and software were used in the creation of this project:</p>
+                        
+                        <div class="reference-section">
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="100">
+                                <h3><i class="fas fa-shapes"></i> Blender</h3>
+                                <p class="reference-info"><strong>Version:</strong> 3.6</p>
+                                <p class="reference-info"><strong>Authors:</strong> Blender Foundation</p>
+                                <p class="license">License: GNU General Public License</p>
+                                <p class="description">
+                                    Blender is a free and open-source 3D computer graphics software toolset used for creating 3D models, animations, and visual effects.
+                                </p>
+                                <a href="https://www.blender.org/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Official Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="150">
+                                <h3><i class="fas fa-code"></i> Visual Studio Code</h3>
+                                <p class="reference-info"><strong>Version:</strong> 1.77</p>
+                                <p class="reference-info"><strong>Authors:</strong> Microsoft</p>
+                                <p class="license">License: MIT</p>
+                                <p class="description">
+                                    Visual Studio Code is a source-code editor made by Microsoft for Windows, Linux and macOS, featuring debugging support, syntax highlighting, and code completion.
+                                </p>
+                                <a href="https://code.visualstudio.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Official Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="200">
+                                <h3><i class="fab fa-github"></i> Git/GitHub</h3>
+                                <p class="reference-info"><strong>Authors:</strong> Linus Torvalds, GitHub, Inc.</p>
+                                <p class="license">License: GNU General Public License v2.0 (Git), Proprietary (GitHub)</p>
+                                <p class="description">
+                                    Git is a distributed version control system for tracking changes in source code, while GitHub is a web-based hosting service for version control and collaboration.
+                                </p>
+                                <a href="https://github.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> GitHub Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Learning Resources & Tutorials</h2>
+                        <p>The following resources and tutorials were consulted during the development of this project:</p>
+                        
+                        <div class="reference-section">
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="100">
+                                <h3><i class="fas fa-book"></i> Three.js Documentation</h3>
+                                <p class="reference-info"><strong>Authors:</strong> three.js contributors</p>
+                                <p class="description">
+                                    The official documentation for Three.js, which provides comprehensive guides, examples, and API references.
+                                </p>
+                                <a href="https://threejs.org/docs/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Documentation
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="150">
+                                <h3><i class="fas fa-video"></i> Three.js Journey</h3>
+                                <p class="reference-info"><strong>Author:</strong> Bruno Simon</p>
+                                <p class="description">
+                                    A comprehensive course on Three.js that covers various aspects of 3D web development, including models, lighting, textures, and animations.
+                                </p>
+                                <a href="https://threejs-journey.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="200">
+                                <h3><i class="fas fa-graduation-cap"></i> Web 3D Applications Module Resources</h3>
+                                <p class="description">
+                                    Course materials, lab assignments, and resources provided as part of the Web 3D Applications module.
+                                </p>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="250">
+                                <h3><i class="fab fa-youtube"></i> Blender Guru Tutorials</h3>
+                                <p class="reference-info"><strong>Author:</strong> Andrew Price</p>
+                                <p class="description">
+                                    Video tutorials covering various aspects of 3D modeling and rendering in Blender.
+                                </p>
+                                <a href="https://www.blenderguru.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Media Resources</h2>
+                        <p>The following media resources were used in this project:</p>
+                        
+                        <div class="reference-section">
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="100">
+                                <h3><i class="fas fa-images"></i> Textures & Materials</h3>
+                                <p class="reference-info"><strong>Source:</strong> Textures.com (formerly CG Textures)</p>
+                                <p class="license">License: Textures.com Standard License</p>
+                                <p class="description">
+                                    Various textures and materials used on the 3D models, including metal, plastic, and glass textures.
+                                </p>
+                                <a href="https://www.textures.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="150">
+                                <h3><i class="fas fa-photo-video"></i> HDRIs & Environment Maps</h3>
+                                <p class="reference-info"><strong>Source:</strong> HDRI Haven (now Polyhaven)</p>
+                                <p class="license">License: CC0 (Public Domain)</p>
+                                <p class="description">
+                                    HDR environment maps used for realistic lighting and reflections in the 3D scenes.
+                                </p>
+                                <a href="https://polyhaven.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="200">
+                                <h3><i class="fas fa-music"></i> Audio Resources</h3>
+                                <p class="reference-info"><strong>Source:</strong> Mixkit & ZapSplat</p>
+                                <p class="license">License: Mixkit Sound Effects Free License and ZapSplat Standard License</p>
+                                <p class="description">
+                                    Sound effects used for user interface interactions and device operation sounds.
+                                </p>
+                                <div>
+                                    <a href="https://mixkit.co/" target="_blank" class="reference-link me-3">
+                                        <i class="fas fa-external-link-alt"></i> Mixkit
+                                    </a>
+                                    <a href="https://www.zapsplat.com/" target="_blank" class="reference-link">
+                                        <i class="fas fa-external-link-alt"></i> ZapSplat
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Code References & Examples</h2>
+                        <p>The following code references and examples were consulted or adapted for this project:</p>
+                        
+                        <div class="reference-section">
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="100">
+                                <h3><i class="fab fa-github"></i> Three.js Examples</h3>
+                                <p class="reference-info"><strong>Authors:</strong> Three.js contributors</p>
+                                <p class="license">License: MIT</p>
+                                <p class="description">
+                                    Official examples from the Three.js repository, showcasing various techniques and features.
+                                </p>
+                                <a href="https://threejs.org/examples/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Examples
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="150">
+                                <h3><i class="fas fa-code"></i> GLSL Shader Examples</h3>
+                                <p class="reference-info"><strong>Source:</strong> The Book of Shaders</p>
+                                <p class="description">
+                                    Examples and tutorials for creating GLSL shaders, which were adapted for custom material effects.
+                                </p>
+                                <a href="https://thebookofshaders.com/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="200">
+                                <h3><i class="fas fa-database"></i> SQLite Database Implementation</h3>
+                                <p class="reference-info"><strong>Source:</strong> SQLite Documentation</p>
+                                <p class="license">License: Public Domain</p>
+                                <p class="description">
+                                    Reference documentation for implementing SQLite databases with PHP, which was used for the database integration.
+                                </p>
+                                <a href="https://www.sqlite.org/docs.html" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Visit Documentation
+                                </a>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="250">
+                                <h3><i class="fas fa-project-diagram"></i> MVC Pattern Implementation</h3>
+                                <p class="reference-info"><strong>Source:</strong> MDN Web Docs</p>
+                                <p class="license">License: CC-BY-SA 2.5</p>
+                                <p class="description">
+                                    References for implementing the Model-View-Controller architectural pattern in JavaScript.
+                                </p>
+                                <a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> MDN Documentation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card" data-aos="fade-up">
+                        <h2>Inspiration & Acknowledgements</h2>
+                        <p>I would like to acknowledge the following sources of inspiration for this project:</p>
+                        
+                        <div class="reference-section">
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="100">
+                                <h3><i class="fas fa-lightbulb"></i> Course Instructors & Teaching Assistants</h3>
+                                <p class="description">
+                                    Special thanks to the instructors and teaching assistants of the Web 3D Applications module for their guidance and support throughout the development of this project.
+                                </p>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="150">
+                                <h3><i class="fas fa-users"></i> Peer Feedback & Testing</h3>
+                                <p class="description">
+                                    Thanks to fellow students who provided valuable feedback during the testing phase of the application.
+                                </p>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="200">
+                                <h3><i class="fas fa-home"></i> Smart Home Product Manufacturers</h3>
+                                <p class="description">
+                                    While no specific products were directly copied, inspiration was drawn from contemporary smart home devices to create models that represent realistic but generic devices.
+                                </p>
+                            </div>
+                            
+                            <div class="reference-item" data-aos="fade-up" data-aos-delay="250">
+                                <h3><i class="fas fa-globe"></i> Three.js Community</h3>
+                                <p class="description">
+                                    Thanks to the active Three.js community on forums, Discord, and GitHub for creating a wealth of examples, tutorials, and resources that helped in overcoming technical challenges.
+                                </p>
+                                <a href="https://discourse.threejs.org/" target="_blank" class="reference-link">
+                                    <i class="fas fa-external-link-alt"></i> Three.js Forum
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">Smart<span>Living</span>3D</div>
+                    <p>An interactive Web 3D application showcasing smart home devices.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Created for Web 3D Applications module</p>
+                    <p>&copy; 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialise AOS animations
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+	"folders": [
+	  {
+		"path": "."
+	  }
+	],
+	"settings": {
+	  "editor.formatOnSave": true,
+	  "editor.defaultFormatter": "esbenp.prettier-vscode",
+	  "liveServer.settings.port": 5500
+	},
+	"extensions": {
+	  "recommendations": [
+		"ritwickdey.liveserver",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"felixfbecker.php-debug",
+		"eamodio.gitlens"
+	  ]
+	}
+  }
